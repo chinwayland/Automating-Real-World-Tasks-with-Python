@@ -1,3 +1,5 @@
 [user]
 	email = waylandchin@gmail.com
 	name = Wayland Chin
+[credential]
+	helper = store
