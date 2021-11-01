@@ -6,8 +6,6 @@ from PIL import Image
 home = os.path.expanduser('~')
 directory = "/images/"
 
-for file in os.listdir(home + directory):
-	image = Image(file)
-	image.rotate(90)
-	image.resize((128, 128))
-	image.save()
+for filename in os.listdir(home + directory):
+	image = Image.open(home + directory + filename)
+	image.convert('RGB').rotate(90).resize((128, 128)).save('/opt/icons/' + filename + '.jpg')
